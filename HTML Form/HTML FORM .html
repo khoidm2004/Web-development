@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> HTML FORMS</title> 
+    </head>
+    <body>
+        <form method="get" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Contact information:</legend>
+                <table>
+                    <div style="float:right ;padding-right:70%; ">
+                        Preferred contact method:
+                        <div>
+                        <input type="checkbox" id="email" name="method">
+                        <label for="email">Email</label><br>
+                        </div>
+                        <div>
+                        <input type="checkbox" id="tel" name="method" >
+                        <label for="tel">Telephone</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="First name" required ><br><br>
+                    </div>
+                    <div>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
+                    </div>
+                    <div>
+                        <label for="email">Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                    </div>
+                    <div>
+                        <label for="tel">Telephone:</label>
+                        <input type="number" id="tel" name="tel" placeholder="Telephone" required><br>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset>
+                <table>
+                    <legend>Feedback:</legend>
+                    <div>
+                    <label for="mes">Message subject: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input id="mes" name="mes" placeholder="Message subject">
+                    </div>
+                    <div>
+                        <textarea name="mes" rows="15" cols="50"></textarea>
+                    </div>  
+                    <div>
+                        <label for="file">Attach a file:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
+                    <div>
+                        <hr  width="98%" size="2px" align="center" color="black" />
+                    </div>
+                    <div>
+                        <button type="submit">Send</button>
+                    </div>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
