@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of odd and even numbers</title>
+</head>
+<body>
+    <h1>Task 3: Program calculates the sums of the odd and even numbers of a given number N.</h1>
+    <div>
+        <input type="number" id="num" placeholder="insert number" style="width:100px ;">
+        <button onclick="calculation()">Calculate</button>
+    </div>
+    <script>
+        function calculation(){
+            const num = document.getElementById("num")
+            let sumOdd=0;
+            let sumEven=0;
+            if(num.value<=0){
+                alert("number cannot be equal or smaller than 0")
+            }else{
+                for (let i =1; i<= num.value; i+=2){
+                    sumOdd +=i;
+                }
+                alert(sumOdd);
+                for (let i= 2; i<=num.value; i+=2){
+                    sumEven +=i;
+                }
+                alert (sumEven);
+            }
+        }
+    </script>
+</body>
+</html>
