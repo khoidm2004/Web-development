@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome check</title>
+</head>
+<body>
+    <h1>Task 3: Program checks Palindrome</h1>
+    <div>
+        <input type="text" id="input" style="width:100px ;">
+        <button onclick="check()">Enter</button>
+    </div>
+    <script>  
+        function check(){
+            const input = document.getElementById("input").value;
+            if (input == input.split('').reverse().join('')) {
+                alert(input + ' is palindrome.');
+            }else {
+            alert(input + ' is not palindrome.');
+            }
+        }      
+    </script>
+</body>
+</html>

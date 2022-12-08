@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counting</title>
+</head>
+<body>
+    <h1>Task 2: Program counts vowel</h1>
+    <div>
+        <input type="text" id="input" style="width:100px ;">
+        <button onclick="count()">Enter</button>
+    </div>
+    <script>
+        function count(){
+            const input = document.getElementById("input").value;
+            let sum = 0;
+            for (var i=0; i<input.length; i++){
+                if(input.charAt(i)==="u" || input.charAt(i)==="U" || input.charAt(i)==="e" || input.charAt(i)==="E" || input.charAt(i)==="o" || input.charAt(i)==="O" || input.charAt(i)==="a" || input.charAt(i)==="A" || input.charAt(i)==="i" || input.charAt(i)==="I" ){
+                    sum+=1;
+                }
+            }
+            alert(input+" contains "+sum+" vowels.");
+        }
+    </script>
+</body>
+</html>
