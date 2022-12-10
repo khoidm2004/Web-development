@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating ID</title>
+</head>
+<body>
+    <h1>Task 2: Program creates ID</h1>
+    <p style="color: red;">Check the number before creating ID.</p>
+    <div>
+        <input type="text" id="input" style="width:230px ;"  placeholder="Insert DDMMYY and individual number">
+        <button onclick="check()">Check</button>
+        <button onclick="enter()">Enter</button>
+    </div>
+    <script>
+        function check(){
+            const input = document.getElementById("input").value;
+            var id = input.replace("-","");
+            var numStr = id.slice(0,9);
+            var dateStr = numStr.slice(0,2);
+            var monthStr = numStr.slice(2,4);
+            var yearStr = numStr.slice(4,6);
+            var date = parseInt(dateStr);
+            var month = parseInt(monthStr);
+            var year = parseInt (yearStr);
+            if(month===2 && date<=28 || month===2 && date<=29 && year%4===0){
+                alert("The ID is correct.")
+            }else if (month===4 && date<=30 || month===6 && date<=30 || month===9 && date<=30 || month===11 && date<=30 ) {
+                alert("The ID is correct.")
+            }else if (month===1 && date<=31 || month===3 && date<=31 || month===5 && date<=31 || month===7 && date<=31 || month===8 && date<=31 || month===10 && date<=31 || month===12 && date<=31 ) {
+                alert("The ID is correct.")
+            }else{alert("The ID is incorrect.")
+}
+        }
+        function enter(){
+            const input = document.getElementById("input").value;
+            var id = input.replace("-","");
+            var value = parseInt(id);
+            var remainder = value%31;
+            var finalRemainder = Math.round(remainder);
+            if(finalRemainder===0 || finalRemainder===1 || finalRemainder===2 || finalRemainder===3 || finalRemainder===4 || finalRemainder===5 || finalRemainder===6 ||finalRemainder===7 || finalRemainder===8 || finalRemainder===9 ){
+                alert(input + finalRemainder);
+            }else if(finalRemainder===10){
+                alert(input+"A");
+            }else if(finalRemainder===11){
+                alert(input+"B");
+            }else if(finalRemainder===12){
+                alert(input+"C");
+            }else if(finalRemainder===13){
+                alert(input+"D");
+            }else if(finalRemainder===14){
+                alert(input+"E");
+            }else if(finalRemainder===15){
+                alert(input+"F");
+            }else if(finalRemainder===16){
+                alert(input+"H");
+            }else if(finalRemainder===17){
+                alert(input+"J");
+            }else if(finalRemainder===18){
+                alert(input+"K");
+            }else if(finalRemainder===19){
+                alert(input+"L");
+            }else if(finalRemainder===20){
+                alert(input+"M");
+            }else if(finalRemainder===21){
+                alert(input+"N");
+            }else if(finalRemainder===22){
+                alert(input+"P");
+            }else if(finalRemainder===23){
+                alert(input+"R");
+            }else if(finalRemainder===24){
+                alert(input+"S");
+            }else if(finalRemainder===25){
+                alert(input+"T");
+            }else if(finalRemainder===26){
+                alert(input+"U");
+            }else if(finalRemainder===27){
+                alert(input+"V");
+            }else if(finalRemainder===28){
+                alert(input+"W");
+            }else if(finalRemainder===29){
+                alert(input+"X");
+            }else if(finalRemainder===30){
+                alert(input+"Y");
+            }
+        }
+    </script>
+</body>
+</html>
